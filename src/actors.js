@@ -47,36 +47,7 @@ class Actor extends Phaser.Physics.Arcade.Sprite {
         this.bar.y = this.y-20
         this.bar_bg.x = this.x
         this.bar_bg.y = this.y-20
-<<<<<<< HEAD
-        /*
-        this.bar.clear();
-        //console.log(this.x, this.y)
-
-        //  BG
-        this.bar.fillStyle(0x000000);
-        this.bar.fillRect(this.x, this.y, 80, 16);
-
-        //  Health
-
-        this.bar.fillStyle(0xffffff);
-        this.bar.fillRect(this.x + 2, this.y + 2, 76, 12);
-
-        if (this.hp < 30)
-        {
-            this.bar.fillStyle(0xff0000);
-        }
-        else
-        {
-            this.bar.fillStyle(0x00ff00);
-        }
-
-        var d = Math.floor(0.76 * this.hp);
-
-        this.bar.fillRect(this.x + 2, this.y + 2, d, 12);
-        */
-=======
        
->>>>>>> main
     }
 
 }
