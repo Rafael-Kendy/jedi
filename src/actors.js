@@ -47,6 +47,7 @@ class Actor extends Phaser.Physics.Arcade.Sprite {
         this.bar.y = this.y-20
         this.bar_bg.x = this.x
         this.bar_bg.y = this.y-20
+<<<<<<< HEAD
         /*
         this.bar.clear();
         //console.log(this.x, this.y)
@@ -73,6 +74,9 @@ class Actor extends Phaser.Physics.Arcade.Sprite {
 
         this.bar.fillRect(this.x + 2, this.y + 2, d, 12);
         */
+=======
+       
+>>>>>>> main
     }
 
 }
