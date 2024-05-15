@@ -1,4 +1,4 @@
-//AOBA
+//AOBA - teste
 
 //class player extends Phaser.Physics.Arcade.Sprite {
 class player extends Actor {
