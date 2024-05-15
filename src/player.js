@@ -145,25 +145,25 @@ class player extends Actor {
       //animacoes do bash
       this.anims.create({
         key: 'bash_up',
-        frames: this.anims.generateFrameNumbers(texture, {start: 208, end: 220}),
+        frames: this.anims.generateFrameNumbers(texture, {start: 0, end: 6}),
         frameRate: 30,
         repeat: 0
         });
     this.anims.create({
         key: 'bash_left',
-        frames: this.anims.generateFrameNumbers(texture, {start: 221, end: 233}),
+        frames: this.anims.generateFrameNumbers(texture, {start: 0, end: 6}),
         frameRate: 30,
         repeat: 0
         });
     this.anims.create({
         key: 'bash_down',
-        frames: this.anims.generateFrameNumbers(texture, {start: 234, end: 246}),
+        frames: this.anims.generateFrameNumbers(texture, {start: 7, end: 13}),
         frameRate: 30,
         repeat: 0
         });
     this.anims.create({
         key: 'bash_right',
-        frames: this.anims.generateFrameNumbers(texture, {start: 247, end: 259}),
+        frames: this.anims.generateFrameNumbers(texture, {start: 7, end: 13}),
         frameRate: 30,
         repeat: 0
         });
@@ -391,7 +391,7 @@ class player extends Actor {
     }
 
     //acho q tem q colocar alguma coisa no if pro tempo bash
-    if (this.scene.keyR.isDown && this.attack_enable) {
+    if (this.scene.keyR.isDown) {
       this.bash();
     }
 

@@ -426,6 +426,11 @@ class Fase_01 extends Phaser.Scene{
         if (this.keyN.isDown){
             this.scene.start('Fase_03')
         }
+
+        //TESTE
+        if (Phaser.Input.Keyboard.JustDown(this.keyR)) {
+            console.log("Oia o R");
+        }
     }
 
     trataPorta (porta, player){
