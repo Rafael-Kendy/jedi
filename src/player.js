@@ -140,6 +140,32 @@ class player extends Actor {
       hideOnComplete: true,
       repeat: 0
       });
+      
+      //animacoes do bash
+      this.anims.create({
+        key: 'bash_up',
+        frames: this.anims.generateFrameNumbers(texture, {start: 208, end: 220}),
+        frameRate: 30,
+        repeat: 0
+        });
+    this.anims.create({
+        key: 'bash_left',
+        frames: this.anims.generateFrameNumbers(texture, {start: 221, end: 233}),
+        frameRate: 30,
+        repeat: 0
+        });
+    this.anims.create({
+        key: 'bash_down',
+        frames: this.anims.generateFrameNumbers(texture, {start: 234, end: 246}),
+        frameRate: 30,
+        repeat: 0
+        });
+    this.anims.create({
+        key: 'bash_right',
+        frames: this.anims.generateFrameNumbers(texture, {start: 247, end: 259}),
+        frameRate: 30,
+        repeat: 0
+        });
 
   }
 
@@ -220,6 +246,25 @@ class player extends Actor {
       this.anims.play('attack_down');
     else
       this.anims.play('attack_up');
+  }
+
+  bash(){ //ataque bash
+    //imprime no console bash e direcao
+    console.log('bash', this.facing);
+
+    this.anims.stop(); //para outras animacoes
+    this.attack_enable = false; //pra n atacar enquanto ja ta atacando
+    this.move_enable = false; //pra n mover
+    this.on('animationcomplete', this.re_enable); //qnd terminar a animacao volta
+    //a animacao q vai tocar dependendo da direcao
+    if (this.facing[0] == 1)
+      this.anims.play('bash_right');
+    else if (this.facing[0] == -1)
+      this.anims.play('bash_left');
+    else if (this.facing[1] == 1)
+      this.anims.play('bash_down');
+    else
+      this.anims.play('bash_up');
   }
 
   swattack(){
@@ -342,6 +387,11 @@ class player extends Actor {
     }
     if (this.scene.keySPACE.isDown && this.attack_enable && this.has_sword) {
       this.swattack();
+    }
+
+    //acho q tem q colocar alguma coisa no if pro tempo bash
+    if (this.scene.keyR.isDown && this.attack_enable) {
+      this.bash();
     }
 
    
